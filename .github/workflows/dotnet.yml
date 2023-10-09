@@ -27,7 +27,7 @@ jobs:
     - name: Variable Substitution appsettings file for tests
       uses: microsoft/variable-substitution@v1
       with:
-        files: 'ColorAverage.Test/appsettings.json'
+        files: 'ColorAverageForEthereum/ColorAverage.Test/appsettings.json'
       env:
         AppSettings.InfuraKey: ${{ secrets.INFURA_KEY }}
     - name: Test
