@@ -1,5 +1,7 @@
 # Ethereum NFT Color Averager (C#)
 
+[![.build](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml/badge.svg)](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml)
+
 ## Overview
 
 This C# program is designed to retrieve Ethereum-based Non-Fungible Tokens (NFTs) and calculate the average color of the images associated with these NFTs. It leverages the Ethereum blockchain and external image processing libraries to accomplish this task.
