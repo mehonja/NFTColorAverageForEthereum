@@ -39,4 +39,4 @@ jobs:
     - name: Add souce to NuGet
       run: dotnet nuget add source --username mehonja --password ${{ secrets.PACKAGE_API_KEY }} --store-password-in-clear-text --name github https://nuget.pkg.github.com/angry_dev/index.json
     - name: Push to NuGet
-      run: dotnet nuget push 'bin/Release/NFTColorAverageForEthereum.${{ github.run_number }}.nupkg' --api-key ${{ secrets.NUGET_API_KEY }} --source "github"
+      run: dotnet nuget push 'bin/Release/ColorAverage.${{ github.run_number }}.nupkg' --api-key ${{ secrets.NUGET_API_KEY }} --source "github"
