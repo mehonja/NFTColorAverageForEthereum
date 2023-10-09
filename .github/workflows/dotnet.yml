@@ -15,12 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Variable Substitution appsettings file for tests
-      uses: microsoft/variable-substitution@v1
-      with:
-        files: 'ColorAverage.Test/appsettings.json'
-      env:
-        AppSettings.InfuraKey: ${{ secrets.INFURA_KEY }}
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
@@ -30,5 +24,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Variable Substitution appsettings file for tests
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: 'ColorAverage.Test/appsettings.json'
+      env:
+        AppSettings.InfuraKey: ${{ secrets.INFURA_KEY }}
     - name: Test
       run: dotnet test --no-build --verbosity normal
