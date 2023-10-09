@@ -1,6 +1,6 @@
 # Ethereum NFT Color Averager (C#)
 
-[![.build](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml/badge.svg)](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml) [![codecov](https://codecov.io/gh/mehonja/NFTColorAverageForEthereum/graph/badge.svg?token=K1PM6O1FQ8)](https://codecov.io/gh/mehonja/NFTColorAverageForEthereum)
+[![.build](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml/badge.svg)](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml) [![codecov](https://codecov.io/gh/mehonja/NFTColorAverageForEthereum/graph/badge.svg?token=K1PM6O1FQ8)](https://codecov.io/gh/mehonja/NFTColorAverageForEthereum)[![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=flat&logo=twitter)]([https://twitter.com/intent/tweet?hashtags=imagesharp,dotnet,oss&text=ImageSharp.+A+new+cross-platform+2D+graphics+API+in+C%23&url=https%3a%2f%2fgithub.com%2fSixLabors%2fImageSharp&via=sixlabors](https://twitter.com/meholini))
 
 ## Overview
 
