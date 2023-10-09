@@ -2,10 +2,19 @@
 
 namespace ColorAverage.PixelAverage
 {
+    /// <summary>
+    /// Service for getting the most used pixel colors.
+    /// </summary>
     public class PixelAverageService
     {
         public PixelAverageService() { }
 
+        /// <summary>
+        /// Gets the top used colors in a picture.
+        /// </summary>
+        /// <param name="file">The file that needs to be anylised.</param>
+        /// <param name="amountOfColors">The amount of colors in the array.</param>
+        /// <returns></returns>
         public string[] GetTopPixelColor(byte[] file, int amountOfColors)
         {
             string path = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());

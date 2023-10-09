@@ -12,6 +12,9 @@ using System.Data;
 
 namespace ColorAverage.MetadataCollection.Ethereum
 {
+    /// <summary>
+    /// Metadata service for seving NFTs
+    /// </summary>
     public class EthereumMetadataService
     {
         private readonly string InfuraApiKey;
@@ -23,6 +26,12 @@ namespace ColorAverage.MetadataCollection.Ethereum
             this.InfuraApiKey = infuraApiKey;
         }
 
+        /// <summary>
+        /// Gets the NFT Metadata URL, can be IPFS.
+        /// </summary>
+        /// <param name="contractAddress">The address of the NFT contract.</param>
+        /// <param name="tokenId">The token ID of the NFT.</param>
+        /// <returns>The URL of the NFT metadata.</returns>
         public async Task<string> GetNftMetadataUrl(string contractAddress, int tokenId)
         {
             TokenUriFunction tokenUriFunction = new TokenUriFunction()
@@ -58,6 +67,12 @@ namespace ColorAverage.MetadataCollection.Ethereum
             return metadataUrl;
         }
 
+        /// <summary>
+        /// Gets the NFT Metadata as a string.
+        /// </summary>
+        /// <param name="contractAddress">The address of the NFT contract.</param>
+        /// <param name="tokenId">The token ID of the NFT.</param>
+        /// <returns>The metadata of the NFT as a string in a JSON format.</returns>
         public async Task<string> GetNftMetadataString(string contractAddress, int tokenId)
         {
             string metadataUrl = await GetNftMetadataUrl(contractAddress, tokenId);
@@ -66,6 +81,12 @@ namespace ColorAverage.MetadataCollection.Ethereum
             else return await new HttpClient().GetStringAsync(metadataUrl);
         }
 
+        /// <summary>
+        /// Gets the NFT picture URL.
+        /// </summary>
+        /// <param name="contractAddress">The address of the NFT contract.</param>
+        /// <param name="tokenId">The token ID of the NFT.</param>
+        /// <returns>The URL of the NFT picture from the metadata. Can be IPFS URL.</returns>
         public async Task<string?> GetNftPictureUrl(string contractAddress, int tokenId)
         {
             string? metadataString = await GetNftMetadataString(contractAddress, tokenId);
@@ -75,6 +96,13 @@ namespace ColorAverage.MetadataCollection.Ethereum
                 .GetString();
         }
 
+        /// <summary>
+        /// Gets the picture of the NFT from the URL in the metadata.
+        /// </summary>
+        /// <param name="contractAddress">The address of the NFT contract.</param>
+        /// <param name="tokenId">The token ID of the NFT.</param>
+        /// <returns>The picture from the NFT as a byte array.</returns>
+        /// <exception cref="NoNullAllowedException">The picture URL cannot be null.</exception>
         public async Task<byte[]> GetNftPicture(string contractAddress, int tokenId)
         {
             string? pictureUrl = await GetNftPictureUrl(contractAddress, tokenId);
