@@ -19,9 +19,38 @@ Before running the program, ensure you have the following dependencies and prere
 - Access to an Ethereum node or a service like Infura to interact with the Ethereum blockchain.
 - Any additional libraries or packages specified in the project's `csproj` file.
 
-## Installation
+## Usage
 
-1. Clone this repository to your local machine:
+1. Instantiate the EthereumMetadataService
 
-   ```shell
-   git clone https://github.com/your-username/ethereum-nft-color-averager-csharp.git
+   ```cs
+   EthereumMetadataService ethereumMetadataService = new EthereumMetadataService("your infura API key");
+
+2. Get NFT Image
+
+   ```cs
+   //the method takes the contract address and the token id as the parameter
+   byte[] picture = ethereumMetadataService.GetNftPicture("contract address", 1);
+
+2.1. Optionally you also have the options to get the NFT picture url, metadata url or metadata
+
+   ```cs
+   //the method takes the contract address and the token id as the parameter
+   string nftPictureUrl = ethereumMetadataService.GetNftPictureUrl("contract address", 1);
+
+   //the method takes the contract address and the token id as the parameter
+   string nftMetadataUrl = ethereumMetadataService.GetNftMetadataUrl("contract address", 1);
+
+   //the method takes the contract address and the token id as the parameter
+   string metadata = ethereumMetadataService.GetNftMetadataString("contract address", 1);
+   ```
+3. Instantiate the PixelAverageService
+
+   ```cs
+   PixelAverageService pixelAverageService = new PixelAverageService();
+
+4. Call the GetTopPixelColor method
+
+   ```cs
+   //the file is a byte[], the second argument is the amount of colors that is returned, the method returns the RGBA
+   string[] topColors = pixelAverageService.GetTopPixelColor(file, 3);
