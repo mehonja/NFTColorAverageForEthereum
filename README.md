@@ -3,6 +3,9 @@
 ## Overview
 
 This C# program is designed to retrieve Ethereum-based Non-Fungible Tokens (NFTs) and calculate the average color of the images associated with these NFTs. It leverages the Ethereum blockchain and external image processing libraries to accomplish this task.
+The library is using [Image Sharp](https://github.com/SixLabors/ImageSharp) for image analysis and [Nethereum](https://github.com/Nethereum/Nethereum) for Blockchain interaction via [Infura](https://www.infura.io).
+
+IMPORTANT: An Infura API key is required. Infuras free API tier allows for 100,000 free requests a day.
 
 ## Features
 
