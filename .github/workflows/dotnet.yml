@@ -18,6 +18,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Variable Substitution appsettings file for tests
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: 'ColorAverageForEthereum/ColorAverage.Test/appsettings.json'
+      env:
+        AppSettings.InfuraKey: ${{ secrets.INFURA_KEY }}
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
