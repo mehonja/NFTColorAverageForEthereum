@@ -1,6 +1,6 @@
 # Ethereum NFT Color Averager (C#)
 
-[![.build](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml/badge.svg)](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml)
+[![.build](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml/badge.svg)](https://github.com/mehonja/NFTColorAverageForEthereum/actions/workflows/dotnet.yml) [![codecov](https://codecov.io/gh/mehonja/NFTColorAverageForEthereum/graph/badge.svg?token=K1PM6O1FQ8)](https://codecov.io/gh/mehonja/NFTColorAverageForEthereum)
 
 ## Overview
 
