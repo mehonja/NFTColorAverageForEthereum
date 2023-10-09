@@ -32,7 +32,7 @@ Before running the program, ensure you have the following dependencies and prere
    //the method takes the contract address and the token id as the parameter
    byte[] picture = ethereumMetadataService.GetNftPicture("contract address", 1);
 
-2.1. Optionally you also have the options to get the NFT picture url, metadata url or metadata
+3. Optionally you also have the options to get the NFT picture url, metadata url or metadata
 
    ```cs
    //the method takes the contract address and the token id as the parameter
@@ -44,12 +44,12 @@ Before running the program, ensure you have the following dependencies and prere
    //the method takes the contract address and the token id as the parameter
    string metadata = ethereumMetadataService.GetNftMetadataString("contract address", 1);
    ```
-3. Instantiate the PixelAverageService
+4. Instantiate the PixelAverageService
 
    ```cs
    PixelAverageService pixelAverageService = new PixelAverageService();
 
-4. Call the GetTopPixelColor method
+5. Call the GetTopPixelColor method
 
    ```cs
    //the file is a byte[], the second argument is the amount of colors that is returned, the method returns the RGBA
