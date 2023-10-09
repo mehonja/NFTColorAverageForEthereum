@@ -31,7 +31,7 @@ jobs:
       env:
         InfuraKey: ${{ secrets.INFURA_KEY }}
     - name: Test
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --no-build --verbosity normal 
+      run: dotnet test --collect "XPlat Code Coverage" /p:CodeCov=true
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
       env:
